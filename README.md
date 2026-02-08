@@ -42,6 +42,17 @@ A pixel-perfect, fully responsive implementation of the Daly College web design,
 Follow these commands to run the project locally:
 
 1. **Clone the repository:**
+
    ```bash
  git clone https://github.com/Rahul2516/daly-college.git
    cd daly-college-react
+
+  2 npm install
+
+  3 npm run dev
+
+  The site will be available at http://localhost:5173 (or similar).
+
+  4 npm run build
+
+  This generates the optimized files in the dist folder.
