@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* --- Custom Colors --- */
+  --color-dc-red: #E31E24;
+  --color-dc-dark: #0A0A0A;
+  --color-dc-text-main: #1F1F1F;
+  --color-dc-text-muted: #666666;
+  --color-dc-border: #E5E5E5;
+  --color-dc-cream: #F5F5F0;
+
+  /* --- Custom Fonts --- */
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+/* --- Custom Utilities --- */
+
+/* 1. Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+/* 2. Infinite Scroll Animation Keyframes */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Move left by 50% of its total width */
+}
+
+/* 3. The Animation Utility Class */
+.animate-scroll {
+  /* Apply the animation: name duration timing-function iteration-count */
+  animation: scroll 40s linear infinite;
+  /* CRITICAL: Force the container to be as wide as its content so it scrolls properly */
+  width: max-content; 
+  /* Use flex to align items in a row */
+  display: flex; 
+}
+
+/* Pause animation on hover */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* 4. Fade Mask for Carousel Edges */
+.mask-linear-fade {
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}

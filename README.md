@@ -43,5 +43,5 @@ Follow these commands to run the project locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
+ git clone https://github.com/Rahul2516/daly-college.git
    cd daly-college-react
